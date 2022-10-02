@@ -1,8 +1,9 @@
 import json
+#Abrir o arquivo de dados
 with open(r'dados.json') as file:
     data = json.load(file)
 
-
+#Definir as funções
 def calcMenorFaturamentoDiario(jsonData):
     diaMinimo = 0
     valorMinimo = 0
@@ -74,6 +75,12 @@ def diasFaturamentoAcimaMedia(jsonData):
 
 
 
+#Utilizar as funções com o arquivo importado sendo a base de dados
+print("Menor Faturamento Diário: " + str(calcMenorFaturamentoDiario(data)))
+
+print("Maior Faturamento Diário: "+ str(calcMaiorFaturamentoDiario(data)))
+
+print("Dias com faturamento acima da média: "+ str(diasFaturamentoAcimaMedia(data)))
 
 
 
